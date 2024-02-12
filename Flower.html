@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flower For Virda</title>
+    <link rel="stylesheet" href="Flower.css">
+</head>
+<body>
+
+    <div class="container" id="points-container">  
+        <h1>Happy Valentine Day For you Virda🫶</h1>
+        <h3>Dear Virda, In your eyes, I see my world,
+            In your heart, I find my home,
+            With you, I am complete,
+            Forever and always, my love.❤️</h3>
+        <br>
+        <audio controls src="Assest/Audio/y2mate.com - Arctic Monkeys  I Wanna Be Yours Instrumental  Best part looped.mp3"></audio>
+        <h3>Here's Flower For you</h3>
+    </div>
+
+    <script>
+        
+        const container = document.getElementById("points-container");
+       const numPoints = 10;
+       
+       
+       function createPoint() {
+           const point = document.createElement("div");
+           point.classList.add("point");
+           container.appendChild(point);
+       
+           // Set initial position at the center
+           point.style.left = "50%";
+           point.style.top = "50%";
+       
+       
+           // Set animation properties
+           const animation = point.animate(
+               [
+                   { transform: "translate(-50%, -50%) rotate(-50deg)" },
+                   { transform: "translate(20%, -40%)"}
+               ],
+               {
+                   duration: 2000 + Math.random() * 2000,
+                   easing: "linear",
+                   iterations: Infinity,
+                   direction: "alternate",
+               }
+           );
+       
+           return { point, animation };
+       }
+       
+       function startAnimation() {
+           for (let i = 0; i < numPoints; i++) {
+       
+               createPoint();
+           }
+       }
+       
+       startAnimation();
+       
+       </script>
+</body>
+</html>

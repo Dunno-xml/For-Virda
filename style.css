@@ -1,0 +1,68 @@
+*{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: #F8FFD2;
+    align-items: center;
+    text-align: center;
+}
+
+h1{
+    color: #4E6C50;
+}
+
+.poem{
+    margin-top: 32px;
+    margin-left: 16px;
+    color: #4E6C50;
+    align-items: center;
+    text-align: center;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.virda{
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+}
+
+.button {
+    position: relative;
+    background-color: #04AA6D;
+    border: none;
+    font-size: 28px;
+    color: #FFFFFF;
+    padding: 20px;
+    width: 400px;
+    text-align: center;
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 100px;
+}
+  
+.button:after {
+    content: "";
+    background: #f1f1f1;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+  
+.button:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.click{
+    width: 300px;
+}
